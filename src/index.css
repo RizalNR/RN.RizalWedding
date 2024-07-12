@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+/*-------------------------------------------
+				Depan
+  ------------------------------------------- */
+  .home {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 34px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .home_title {
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.671);
+    font-family: "Dancing Script", cursive;
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+
+  .btn-undangan{
+    width: 200px;
+    height: 42px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .home_title_2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    color: rgb(250, 162, 177);
+    margin-top: 20px;
+    animation-name: title_2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    text-align: center;
+  }
+
+  .home_title_3 {
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.671);
+    font-family: "Dancing Script", cursive;
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .main_home_image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 40px;
+    box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
+    animation-name: main_home_image;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+
+
+  .btn_open_ivt {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgb(250, 162, 177);
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+
+
+
+/*-------------------------------------------
+				Belakang
+  ------------------------------------------- */
+
+.container {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 34px;
+}
+
+.title {
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.671);
+}
+
+.title_2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: rgb(250, 162, 177);
+  margin-top: 20px;
+  animation-name: title_2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+.main_image {
+  border-radius: 300px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 40px;
+  border: 5px solid rgb(250, 162, 177);
+  box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
+  animation-name: main_image;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.detail_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.detail_name h1 {
+  font-size: 1.5rem;
+  color: rgb(250, 162, 177);
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.detail_name p {
+  color: gray;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.resepsi {
+  width: 100%;
+  margin-top: 40px;
+  border-top: 2px dotted rgb(128, 128, 128);
+  padding: 40px 0;
+}
+
+.resepsi h1 {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.resepsi p,
+.resepsi address {
+  color: rgb(102, 100, 100);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.map {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 4px 5px 7px rgb(250, 162, 177);
+}
+
+@keyframes title_2 {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes main_home_image {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes main_image {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.summary {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(250, 162, 177);
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+details .summary ::marker {
+  display: none !important;
+}
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu_icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgb(250, 162, 177);
+  color: black;
+  padding: 8px;
+  border-radius: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close_icon {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.komentar {
+  width: 100%;
+  margin-top: 40px;
+  border-top: 2px dotted rgb(128, 128, 128);
+  padding: 40px 0;
+}
+
+.komentar h1,
+.komentar p {
+  font-size: 2rem;
+  color: rgb(128, 128, 128);
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container_comments {
+  width: 100vw;
+  height: auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment_form {
+  width: 300px;
+  padding: 20px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.form_group input {
+  padding: 8px;
+  color: gray;
+  font-weight: 300;
+  border: 0.5px solid black;
+}
+
+.form_group textarea {
+  padding: 8px;
+  height: 100px;
+  border: 0.5px solid black;
+  color: gray;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+}
+
+.btn_group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn_group button {
+  flex: 1;
+  height: 35px;
+  outline: none;
+  border: none;
+}
+
+.btn_submit {
+  color: white;
+  background-color: green;
+}
+
+.btn_reset {
+  color: black;
+  background-color: white;
+}
+
+.title {
+  color: rgb(128, 128, 128);
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
+
+.comment_card {
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.658);
+  flex-direction: column;
+  border-radius: 20px;
+  color: rgb(53, 51, 51);
+}
+
+.comment_card h3 {
+  font-size: 1.5rem;
+  color: green;
+  font-family: "Dancing Script", cursive;
+}
+
+.comment_card small {
+  font-style: italic;
+}
+
+.comment_card:hover {
+  box-shadow: 4px 5px 20px green;
+}
+
+.comment_page .title {
+  margin-top: 20px;
+}
+
+.root {
+  height: 500px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
