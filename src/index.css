@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url('https://fonts.cdnfonts.com/css/photograph-signature');
+
+                
 
 html {
   scroll-behavior: smooth;
@@ -8,16 +12,13 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.body {
-  overflow: hidden;
+body {
+  overflow: auto;
   width: 100vw;
   min-height: 100vh;
-  background-color: whitesmoke;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-
 }
 
 h1,
@@ -39,27 +40,18 @@ h4 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 34px;
+    padding: 24px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: #4568DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background-image: url('/public/bghome1.jpg'); /* URL relatif ke folder public */
   }
 
-  .home_title {
-    font-weight: 200;
-    color: rgba(0, 0, 0, 0.671);
-    font-family: "Dancing Script", cursive;
-    margin-top: 10px;
-    font-size: 1.5rem;
-  }
 
   .btn-undangan{
-    width: 200px;
+    width: 150px;
     height: 42px;
+    font-family: "Crimson Text", serif;
     background-color: orange;
     color: white;
     border-radius: 10px;
@@ -67,36 +59,77 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    outline: none;
+    animation: bounce 2s ease-in-out left;
+  }
+
+  .home_title_1 {
+    margin-top: 60px;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.671);
+    font-family: "Crimson Text", serif;
+    font-size: 1.1rem;
+    animation-name: title_3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
   }
 
   .home_title_2 {
-    font-family: "Dancing Script", cursive;
-    font-size: 2.5rem;
-    color: rgb(250, 162, 177);
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-family: photograph signature, Sans-serif;
+    font-size: 68px;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px rgba(122.99999999999997, 122.99999999999997, 122.99999999999997, .3);
+    font-size: 50px;
+    color: #3F6582;
     margin-top: 20px;
     animation-name: title_2;
     animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     text-align: center;
+    background: linear-gradient(to top, #889297, #335e80 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 
   .home_title_3 {
     font-weight: 200;
     color: rgba(0, 0, 0, 0.671);
-    font-family: "Dancing Script", cursive;
-    margin-top: 30px;
-    font-size: 1.5rem;
+    font-family: "Crimson Text", serif;
+    font-size: 1.2rem;
+    animation-name: title_3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  .home_title_4 {
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.671);
+    font-family: "Crimson Text", serif;
+    font-size: 1.2rem;
+    animation-name: title_4;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
   }
 
   .main_home_image {
+    border-radius: 300px;
     width: 250px;
     height: 250px;
     object-fit: cover;
-    margin-top: 40px;
-    box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
-    animation-name: main_home_image;
+    margin-top: 10px;
+    border: 5px solid rgb(240, 184, 65);
+    box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.438);
+    animation-name: main_image;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 500ms;
@@ -124,7 +157,139 @@ h4 {
 				Belakang
   ------------------------------------------- */
 
-.container {
+  .container {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .resepsi_top {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/public/bgpolos.jpg'); /* URL relatif ke folder public */
+    position: relative;
+  }
+
+  .calendar {
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .btn-calendar {
+    width: 150px;
+    height: 42px;
+    font-family: "Crimson Text", serif;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+    outline: none;
+    animation: bounce 2s ease-in-out left;
+    
+  }
+
+  .container_top {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  .title {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: "Crimson Text", serif;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px rgba(122.99999999999997, 122.99999999999997, 122.99999999999997, .3);
+    color: #3F6582;
+    animation-name: title_2;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    text-align: center;
+    margin-top: 200px;
+  }
+  
+  .title_2 {
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-family: photograph signature, Sans-serif;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px rgba(122.99999999999997, 122.99999999999997, 122.99999999999997, .3);
+    color: #3F6582;
+    animation-name: title_2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+    text-align: center;
+  }
+
+  .title_3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: "Crimson Text", serif;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px rgba(122.99999999999997, 122.99999999999997, 122.99999999999997, .3);
+    color: #3F6582;
+    animation-name: title_2;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    text-align: center;
+  }
+
+  .img_top {
+    width: auto;
+    height: 300px;
+    position: absolute;
+    z-index: 0;
+    top: 200px;
+    opacity: 40%;
+  }
+
+  /* src/Countdown.css */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: "Crimson Text", serif;
+  font-weight: 100;
+  text-shadow: 1px 1px 5px rgba(122.99999999999997, 122.99999999999997, 122.99999999999997, .3);
+  color: #3F6582;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/*END src/Countdown.css */
+  
+.resepsi_2 {
   width: 100vw;
   height: auto;
   min-height: 100vh;
@@ -132,316 +297,465 @@ h4 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 34px;
-}
-
-.title {
-  font-weight: 200;
-  color: rgba(0, 0, 0, 0.671);
-}
-
-.title_2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3rem;
-  color: rgb(250, 162, 177);
-  margin-top: 20px;
-  animation-name: title_2;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-  text-align: center;
-}
-
-.main_image {
-  border-radius: 300px;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  margin-top: 40px;
-  border: 5px solid rgb(250, 162, 177);
-  box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
-  animation-name: main_image;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 500ms;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.detail_name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.detail_name h1 {
-  font-size: 1.5rem;
-  color: rgb(250, 162, 177);
-  font-family: "Dancing Script", cursive;
-  margin: 0;
-  padding: 0;
-}
-
-.detail_name p {
-  color: gray;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.resepsi {
   width: 100%;
-  margin-top: 40px;
   border-top: 2px dotted rgb(128, 128, 128);
-  padding: 40px 0;
+  padding: 40px 0; 
+  background-image: url('/public/bgpolos.jpg'); /* URL relatif ke folder public */
+  position: relative; 
 }
 
-.resepsi h1 {
-  font-size: 2rem;
-  color: rgb(128, 128, 128);
-  font-family: "Dancing Script", cursive;
-  margin: 0;
-  padding: 0;
+.container_top2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.resepsi p,
-.resepsi address {
-  color: rgb(102, 100, 100);
-  text-align: left;
-  line-height: 1.5;
+.detail_name1 {
+ color: #3F6582;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px ; 
 }
 
-.map {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 4px 5px 7px rgb(250, 162, 177);
-}
-
-@keyframes title_2 {
-  0% {
-    transform: translateY(-50px);
+  .main_image {
+    border-radius: 300px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 5px solid rgb(240, 184, 65);
+    box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.438);
+    animation-name: main_image;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
     opacity: 0;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  
+  .detail_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
   }
-}
-
-@keyframes main_home_image {
-  0% {
-    transform: rotate(-90deg);
-    opacity: 0;
+  
+  .detail_name h1 {
+    font-weight: 100;
+    font-size: 1.8rem;
+    color: #3F6582;
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    padding: 0;
   }
-  100% {
-    transform: rotate(0);
-    opacity: 1;
+  
+  .detail_name p {
+    color: #3F6582;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px ;
   }
-}
 
-@keyframes main_image {
-  0% {
-    transform: rotate(-90deg);
-    opacity: 0;
+  .detail_dan h1 {
+    font-weight: 100;
+    font-size: 1.8rem;
+    color: #3F6582;
+    font-family: 'Trebuchet MS' Arial, sans-serif;
+    
   }
-  100% {
-    transform: rotate(0);
-    opacity: 1;
+  
+  .resepsi_3 {
+    width: 100%;
+    border-top: 2px dotted rgb(128, 128, 128);
+    background-image: url('/public/bgpolos.jpg'); /* URL relatif ke folder public */
+    position: relative; 
   }
-}
+  
+  .container_top3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px ;
+  }
+  
+  .container_top3 h1 {
+    font-weight: 100;
+    font-size: 2rem;
+    color: #3F6582;
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    padding: 0;
+  }
 
-.summary {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: rgb(250, 162, 177);
-  border-radius: 20px;
-  margin-top: 40px;
-}
+  .container_top3 h2 {
+    font-weight: 100;
+    font-size: 3rem;
+    color: #3F6582;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+  }
 
-details .summary ::marker {
-  display: none !important;
-}
+  .maps_icons {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  
+  .resepsi_3 p {
+    color: #3F6582;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
 
-.menu {
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: pink;
-  padding: 0;
-  margin: 0;
-}
+  .resepsi_3 address {
+    color: #3F6582;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 5px;
+  }
+  
+  .summary_3 {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(255, 166, 0, 0.774);
+    border-radius: 20px;
+    margin-top: 10px;
+    
+  }
 
-.menu_item {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Dancing Script", cursive;
-  font-size: 2rem;
-}
+  .resepsi_4 {
+    width: 100%;
+    background-image: url('/public/bgpolos.jpg'); /* URL relatif ke folder public */
+    border-top: 2px dotted rgb(128, 128, 128);
+  }
+  
+  .container_top4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px ;
+  }
+  
+  .container_top4 h1 {
+    font-weight: 100;
+    font-size: 2rem;
+    color: #3F6582;
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    padding: 0;
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  .container_top4 h2 {
+    font-weight: 100;
+    font-size: 3rem;
+    color: #3F6582;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .resepsi_4 p {
+    color: #3F6582;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
 
-.menu_icon {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: rgb(250, 162, 177);
-  color: black;
-  padding: 8px;
-  border-radius: 100px;
-  cursor: pointer;
-  user-select: none;
-}
+  .resepsi_4 address {
+    color: #3F6582;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .summary_4 {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(255, 166, 0, 0.774);
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+  
+  .map {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 4px 5px 7px #3F6582;
+  }
+  
+  
+  @keyframes title {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
-.close_icon {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  user-select: none;
-}
+  @keyframes title_2 {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes title_3 {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
-.komentar {
-  width: 100%;
-  margin-top: 40px;
-  border-top: 2px dotted rgb(128, 128, 128);
-  padding: 40px 0;
-}
-
-.komentar h1,
-.komentar p {
-  font-size: 2rem;
-  color: rgb(128, 128, 128);
-  font-family: "Dancing Script", cursive;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.container_comments {
-  width: 100vw;
-  height: auto;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.comment_form {
-  width: 300px;
-  padding: 20px;
-  background-color: pink;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.form_group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
-}
-
-.form_group input {
-  padding: 8px;
-  color: gray;
-  font-weight: 300;
-  border: 0.5px solid black;
-}
-
-.form_group textarea {
-  padding: 8px;
-  height: 100px;
-  border: 0.5px solid black;
-  color: gray;
-  font-size: inherit;
-  font-family: inherit;
-  font-weight: 300;
-}
-
-.btn_group {
-  display: flex;
-  gap: 10px;
-}
-
-.btn_group button {
-  flex: 1;
-  height: 35px;
-  outline: none;
-  border: none;
-}
-
-.btn_submit {
-  color: white;
-  background-color: green;
-}
-
-.btn_reset {
-  color: black;
-  background-color: white;
-}
-
-.title {
-  color: rgb(128, 128, 128);
-  font-family: "Dancing Script", cursive;
-  font-size: 2rem;
-}
-
-.comment_card {
-  background-color: white;
-  padding: 20px;
-  width: 90%;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.658);
-  flex-direction: column;
-  border-radius: 20px;
-  color: rgb(53, 51, 51);
-}
-
-.comment_card h3 {
-  font-size: 1.5rem;
-  color: green;
-  font-family: "Dancing Script", cursive;
-}
-
-.comment_card small {
-  font-style: italic;
-}
-
-.comment_card:hover {
-  box-shadow: 4px 5px 20px green;
-}
-
-.comment_page .title {
-  margin-top: 20px;
-}
-
-.root {
-  height: 500px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
+  @keyframes title_4 {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(-0px);
+    }
+  }
+  
+  @keyframes main_home_image {
+    0% {
+      transform: rotate(-90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes main_image {
+    0% {
+      transform: rotate(-90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  .summary {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(250, 162, 177);
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+  
+  details .summary ::marker {
+    display: none !important;
+  }
+  
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu_item {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .menu_icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(250, 162, 177);
+    color: black;
+    padding: 8px;
+    border-radius: 100px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .close_icon {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .komentar {
+    width: 100%;
+    margin-top: 40px;
+    border-top: 2px dotted rgb(128, 128, 128);
+    padding: 40px 0;
+  }
+  
+  .komentar h1,
+  .komentar p {
+    font-size: 2rem;
+    color: rgb(128, 128, 128);
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container_comments {
+    width: 100vw;
+    height: auto;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .comment_form {
+    width: 300px;
+    padding: 20px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .form_group input {
+    padding: 8px;
+    color: gray;
+    font-weight: 300;
+    border: 0.5px solid black;
+  }
+  
+  .form_group textarea {
+    padding: 8px;
+    height: 100px;
+    border: 0.5px solid black;
+    color: gray;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+  }
+  
+  .btn_group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn_group button {
+    flex: 1;
+    height: 35px;
+    outline: none;
+    border: none;
+  }
+  
+  .btn_submit {
+    color: white;
+    background-color: green;
+  }
+  
+  .btn_reset {
+    color: black;
+    background-color: white;
+  }
+  
+  .comment_card {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.658);
+    flex-direction: column;
+    border-radius: 20px;
+    color: rgb(53, 51, 51);
+  }
+  
+  .comment_card h3 {
+    font-size: 1.5rem;
+    color: green;
+    font-family: "Dancing Script", cursive;
+  }
+  
+  .comment_card small {
+    font-style: italic;
+  }
+  
+  .comment_card:hover {
+    box-shadow: 4px 5px 20px green;
+  }
+  
+  .comment_page .title {
+    margin-top: 20px;
+  }
+  
+  .root {
+    height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  
