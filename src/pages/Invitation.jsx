@@ -2,6 +2,9 @@ import db from "../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import CountdownTimer from "./Countdown";
 import { GrMapLocation } from "react-icons/gr";
+import { useRef, useState } from "react";
+import { FaPlayCircle } from "react-icons/fa";
+import { FaCirclePause } from "react-icons/fa6";
 
 
 
@@ -54,6 +57,22 @@ function Invitation() {
   }
   //pengaturan Waktu & Tanggal
   const targetDate = new Date('2024-09-21T23:59:59');
+
+
+
+  // audio pause play
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const togglePlayPause = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
   
   
 
@@ -191,49 +210,7 @@ function Invitation() {
         </div>
       </section>
 
-
-    {/* Section 5 KONFIRMASI KEHADIRAN */}
-    <section className="resepsi_4" id="top4">
-      <div className="container_top4">
-        <h1>Konfirmasi Kehadiran</h1>
-        <p>Silahkan konfirmasi kehadiran anda</p>
-        <address>Gedung Empire Palace, 15 Oktober 2022</address>
-
-        <details>
-          <summary className="summary_3">Isi Form Kehadiran</summary>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfYaCv3A2MYr3GWBmv6T5Yj-bDADBrl-ysmZ-B-0pdF6JirWg/viewform?embedded=true"
-            width="100%"
-            height="1000"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-          >
-            Memuat…
-          </iframe>
-        </details>
-        </div>
-      </section>
-
-      <section className="resepsi" id="konfirmasi">
-        <h1>Konfirmasi Kehadiran</h1>
-        <p>Silahkan konfirmasi kehadiran anda</p>
-        <address>Gedung Empire Palace, 15 Oktober 2022</address>
-
-        <details>
-          <summary className="summary">Isi Form Kehadiran</summary>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfYaCv3A2MYr3GWBmv6T5Yj-bDADBrl-ysmZ-B-0pdF6JirWg/viewform?embedded=true"
-            width="100%"
-            height="1000"
-            frameBorder="0"
-            marginHeight="0"
-            marginWidth="0"
-          >
-            Memuat…
-          </iframe>
-        </details>
-      </section>
+    
 
       <section className="komentar" id="komentar">
         <h1>Kirimkan Pesan</h1>
@@ -253,16 +230,6 @@ function Invitation() {
           </div>
 
           <div className="form_group">
-            <input
-              type="time"
-              id="time"
-              name="time"
-              placeholder="waktu"
-              required
-            />
-          </div>
-
-          <div className="form_group">
             <textarea
               id="ucapan"
               name="ucapan"
@@ -270,6 +237,16 @@ function Invitation() {
               required
             ></textarea>
           </div>
+
+          <select id="cars" name="cars">
+            <option value="konfirmasi kehadiran">
+              konfirmasi kehadiran
+            </option>
+            <option value="Hadir">Hadir</option>
+            <option value="Akan Hadir">Akan Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+          </select>
+
 
           <div className="btn_group">
             <button className="btn_submit" type="submit">
@@ -285,10 +262,11 @@ function Invitation() {
       </main>
 
       <div id="audio_container" className="audio-box">
-        <audio id="song" controls loop autoPlay>
+        <audio ref={audioRef} id="song" hidden controls loop autoPlay>
           <source src="https://res.cloudinary.com/rizalnr/video/upload/v1647408382/musik/Akad_eahoms.mp3" />
         </audio>
       </div>
+      <button className="btn_play_pause" onClick={togglePlayPause}>{isPlaying ?  <FaCirclePause /> : <FaPlayCircle /> }</button>
     </main>
   );
 }

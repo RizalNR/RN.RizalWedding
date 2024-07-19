@@ -12,7 +12,6 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body {
@@ -586,6 +585,8 @@ h4 {
   details .summary ::marker {
     display: none !important;
   }
+
+  
   
   .menu {
     width: 100vw;
@@ -639,9 +640,9 @@ h4 {
   
   .komentar {
     width: 100%;
-    margin-top: 40px;
     border-top: 2px dotted rgb(128, 128, 128);
     padding: 40px 0;
+    background-image: url('/public/bgpolos.jpg');
   }
   
   .komentar h1,
@@ -657,6 +658,7 @@ h4 {
   .container_comments {
     width: 100vw;
     height: auto;
+    background-image: url('/public/bgpolos.jpg');
   }
   
   .main {
@@ -669,9 +671,11 @@ h4 {
   .comment_form {
     width: 300px;
     padding: 20px;
-    background-color: pink;
     display: flex;
+    backdrop-filter: blur(2px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(2px);
     flex-direction: column;
+    background: transparent;
     gap: 12px;
   }
   
@@ -758,4 +762,13 @@ h4 {
     align-items: center;
   }
   
+.btn_play_pause {
+  position: absolute;
+  bottom: 20px;
+  position: fixed;
+  right: 10px;
+  font-size: 40px;
+  border: none;
+  background: none;
+}
   
