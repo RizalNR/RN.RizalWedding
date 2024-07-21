@@ -13,14 +13,14 @@ const Home = () => {
         className="main_home_image"
       />
       <h1 className="home_title_2">
-        Rizal & Billah
+      Billah & Rizal 
       </h1>
 
-      <h3 className="home_title_3">Sabtu, 21 September 2024</h3>
+      <h3 className="home_title_3">Sabtu, 14 September 2024</h3>
       <h1 className="home_title_4">Kepada Yth. Bapak/Ibu/Saudara/i</h1>
       <h1 className="ivt_name">{nama}</h1>
 
-      <NavLink to={"/invitation"} className={`btn-undangan`}>
+      <NavLink to={"/invitation"} className={`btn-undangan`} >
         Open Invitation
       </NavLink>
     </main>

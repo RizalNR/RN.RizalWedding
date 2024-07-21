@@ -8,6 +8,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/invitation" element={<Invitation />} />
+
       </Routes>
     </div>
   );

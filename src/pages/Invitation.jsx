@@ -1,51 +1,70 @@
 import db from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDocs, collection, orderBy, query } from "firebase/firestore";
 import CountdownTimer from "./Countdown";
 import { GrMapLocation } from "react-icons/gr";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaCirclePause } from "react-icons/fa6";
+import dayjs from "dayjs";
+
 
 
 
 function Invitation() {
+ 
+  
+  const [allComent, setAllComent] = useState([])
   function handleComment(event) {
     //stop form untuk refresh page
     event.preventDefault();
 
+    const currentDate = dayjs()
+
+ 
+
     //tangkap value dari input elemen
     const nama = event.target.nama.value;
     const ucapan = event.target.ucapan.value;
-    const time = event.target.time.value;
+    const kehadiran = event.target.kehadiran.value;
+    const time =  currentDate.format('YYYY-MM-DD HH:mm:ss');
 
     //tampilkan ke console
     console.info({
       nama,
       ucapan,
-      time,
+      kehadiran,
+      time
     });
 
     //confirmasi ke user
-    const conf = window.confirm(`
-        nama      : ${nama}
-        ucapan    : ${ucapan}
-        time     : ${time}
-        `);
+    // const conf = window.confirm(`
+    //     nama      : ${nama}
+    //     ucapan    : ${ucapan}
+    //     kehadiran : ${kehadiran}  
+    //     `);
 
-    if (!conf) return;
+    // if (!conf) return;
 
     // store data ke firebase
-    storeBiodata({
+    storeInvitation({
       nama,
       ucapan,
-      time,
+      kehadiran,
+      time
 
       // eslint-disable-next-line no-unused-vars
-    }).then((res) => console.info("data berhasil di masukan"));
+    }).then((res) =>{
+      console.info("data berhasil di masukan");
+      event.target.reset()
+      window.location.reload(); 
+    
+    }) 
+    
+    
   }
 
   // Mendeklarasikan fungsi asinkron bernama storeBiodata yang menerima parameter data
-  async function storeBiodata(data) {
+  async function storeInvitation(data) {
     // Membuat referensi ke dokumen di dalam koleksi "biodata" dengan ID berdasarkan email dari data
     const docRef = doc(db, "/coment/" + data.nama);
 
@@ -55,8 +74,9 @@ function Invitation() {
     // Mengembalikan hasil dari operasi penyimpanan
     return store;
   }
+
   //pengaturan Waktu & Tanggal
-  const targetDate = new Date('2024-09-21T23:59:59');
+  const targetDate = new Date('2024-09-14T09:00:00');
 
 
 
@@ -73,7 +93,32 @@ function Invitation() {
     }
     setIsPlaying(!isPlaying);
   };
+
+  //COMENT
+  async function getAllData(){
+    let result =[]
+    const collRef = collection(db, "coment");
+    const urutan = query(collRef, orderBy("time", "desc"));
+    const allData = await getDocs(urutan)
+
+    allData.forEach((e)=>{
+      result.push(e.data())
+    })
+    return result
+  }
+
+  useEffect(()=>{
+    getAllData()
+    .then((res)=>{
+      setAllComent(prev=> prev=res)
+    })
+  }, [])
   
+  useEffect(()=>{
+    console.log(allComent)
+  }, [allComent])
+  
+  //GALERY
   
 
   return (
@@ -83,8 +128,8 @@ function Invitation() {
      <section className="resepsi_top" id="top">
       <div className="container_top">
       <h3 className="title">THE WEDDING OF</h3>
-      <h1 className="title_2">Rizal & Billah</h1>
-      <h3 className="title_3">Sabtu, 21 September 2024</h3>
+      <h1 className="title_2">Billah & Rizal</h1>
+      <h3 className="title_3">Sabtu, 14 September 2024</h3>
       </div>
       <img className="img_top" src="/wayang.png" alt="" />
       <CountdownTimer targetDate={targetDate}/> 
@@ -99,6 +144,8 @@ function Invitation() {
     <div className="container_top2">
       
       <div className="detail_name1">
+        <h1>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+        <h2>Assalamualaikum Warahmatullahi Wabarakatuh </h2>
         <p>
         Tanpa mengurangi rasa hormat <br />
         kami mengundang Bapak/Ibu/Saudara/i <br />
@@ -107,16 +154,18 @@ function Invitation() {
       </div>  
       
       <img
-        src="public/cowo 1.png"
+        src="public/billa.jpg"
         alt=""
         className="main_image"
       />
 
       <div className="detail_name">
-        <h1>Rizal Nur Ramadhan, S.Kom</h1>
+      <h1>Ayudyah Ainun Nabillah, S.H</h1>
         <p>
-          Putra Pertama Dari: <br /> Mayor Laut (E) Nurjaya & (Almh) Ibu Lilik Rustiana
+          Putri Kedua Dari: <br /> Pelda (Purn) Slamet Riyanto & Ibu Arni Maya Nur
+          Priyatin
         </p>
+        
       </div>
 
       <div className="detail_dan">
@@ -124,25 +173,26 @@ function Invitation() {
       </div>
 
       <img
-        src="public/cewe1.png"
+        src="public/rama.jpg"
         alt=""
         className="main_image"
       />
 
       <div className="detail_name">
-        <h1>Ayudyah Ainun Nabillah, S.H</h1>
+      <h1>Rizal Nur Ramadhan, S.Kom</h1>
         <p>
-          Putri Kedua Dari: <br /> Pelda (Purn) Slamet Riyanto & Ibu Arni Maya Nur
-          Priyatin
+          Putra Pertama Dari: <br /> Mayor Laut (E) Nurjaya & (Almh) Ibu Lilik Rustiana
         </p>
       </div>
     </div>
     </section>
 
     {/* Section 3 AKAD NIKAH */}
-      <section className="resepsi_3" id="top3">
+   <section className="resepsi_3" id="top3">
       <div className="container_top3">
         <h1>Akad Nikah</h1>
+        <h1>&</h1>
+        <h1>Resepsi</h1>
         <p>Sabtu,</p>
         <h2>14</h2>
         <p>September 2024 <br/> 09:00 WIB - Selesai</p>
@@ -172,14 +222,14 @@ function Invitation() {
         </details>
         
         </div>
-      </section>
+      </section>   
 
-    {/* Section 4 RESEPSI PERNIKAHAN*/}
+    {/* Section 4 RESEPSI PERNIKAHAN
     <section className="resepsi_4" id="top3">
       <div className="container_top4">
         <h1>Resepsi Pernikahan</h1>
         <p>Sabtu,</p>
-        <h2>21</h2>
+        <h2>14</h2>
         <p>September 2024 <br/> 10:00 WIB - Selesai</p>
 
       <div className="maps_icons">
@@ -203,18 +253,46 @@ function Invitation() {
             id="map"
             className="map"
           ></iframe>
-
-
         </details>
-        
         </div>
-      </section>
+      </section> */}
+
+
+{/* GALERY */}
+
+<section className="resepsi_3" id="top3">
+      <div className="container_top3">
+        <h1>Gallery</h1>
+      </div>
+
+      <div className="galery" >
+        <img src="public/bg1.jpeg" alt="" />
+      </div>
+      <div className="galery" >
+        <img src="public/bg1.jpeg" alt="" />
+      </div>
+      <div className="galery" >
+        <img src="public/bg1.jpeg" alt="" />
+      </div>
+       
+        
+      </section>   
+
+
+
+
+{/* HADIAH */}
+    <section className="resepsi_3" id="top3">
+      <div className="container_top3">
+        <h1>Amplop Digital</h1>
+      </div>       
+        
+    </section> 
 
     
-
+{/* COMENTs */}
       <section className="komentar" id="komentar">
-        <h1>Kirimkan Pesan</h1>
-        <p>Untuk Kami Berdua</p>
+        <h1>Kirimkan Ucapan & DOA</h1>
       </section>
 
       <main className="container_comments main">
@@ -233,33 +311,57 @@ function Invitation() {
             <textarea
               id="ucapan"
               name="ucapan"
-              placeholder="Kirim Pesan"
+              placeholder="Ucapan & Doa"
               required
             ></textarea>
           </div>
 
-          <select id="cars" name="cars">
+          <select id="kehadiran" className="confirm" name="kehadiran">
             <option value="konfirmasi kehadiran">
-              konfirmasi kehadiran
+              Konfirmasi Kehadiran
             </option>
             <option value="Hadir">Hadir</option>
             <option value="Akan Hadir">Akan Hadir</option>
             <option value="Tidak Hadir">Tidak Hadir</option>
           </select>
 
-
           <div className="btn_group">
             <button className="btn_submit" type="submit">
               Submit
             </button>
           </div>
-
-          <label className="title" htmlFor="text">
-            Tampilan Pesan
-          </label>
-          <div className="root" id="root"></div>
         </form>
-      </main>
+
+        <div className="container_top5">
+
+            <h1 className="title" htmlFor="text">
+              Tampilan Pesan
+            </h1>
+            
+          <div className="root" id="root">
+
+          {
+            allComent.map((e, index)=>(
+              <div className="card" key={index}>
+              <div className="card-header">
+                  <h2>{e.nama}</h2>
+              </div>
+            
+            <div className="card-body">
+                <p className="message">{e.ucapan}</p>
+                <p className="attendance">Kehadiran: {e.kehadiran}</p>
+            </div>
+            
+            <div className="card-footer">
+                <p className="timestamp" id="time">Dikirim pada: {e.time}</p>
+            </div>
+          </div>
+            ))
+          }
+        </div>
+      </div>  
+    </main>
+      
 
       <div id="audio_container" className="audio-box">
         <audio ref={audioRef} id="song" hidden controls loop autoPlay>

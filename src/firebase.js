@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAvW6RTCKpgmJVep2bU3tffBx2NrKN8G9M",
-  authDomain: "undangan-rama.firebaseapp.com",
-  projectId: "undangan-rama",
-  storageBucket: "undangan-rama.appspot.com",
-  messagingSenderId: "58524979579",
-  appId: "1:58524979579:web:846e8e0ad13b9259bb2dde"
+  apiKey: "AIzaSyDHnCG5m2OTezqMNcPd9sMTAQaEYk7LsrE",
+  authDomain: "rn-wedding-3e2e5.firebaseapp.com",
+  projectId: "rn-wedding-3e2e5",
+  storageBucket: "rn-wedding-3e2e5.appspot.com",
+  messagingSenderId: "50458303871",
+  appId: "1:50458303871:web:3160732de61c595f59ce4a"
 };
 
 // Initialize Firebase
