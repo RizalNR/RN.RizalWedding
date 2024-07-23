@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaCirclePause } from "react-icons/fa6";
 import dayjs from "dayjs";
+import Reward from "./Reward";
+import Swipper from "../components/Galery";
 
 
 
@@ -82,7 +84,7 @@ function Invitation() {
 
   // audio pause play
 
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
 
   const togglePlayPause = () => {
@@ -122,7 +124,7 @@ function Invitation() {
   
 
   return (
-    <main className="container">
+    <main className="container_custom overflow-x-hidden">
      
      {/* Section 1 */}
      <section className="resepsi_top" id="top">
@@ -265,7 +267,9 @@ function Invitation() {
         <h1>Gallery</h1>
       </div>
 
-      <div className="galery" >
+      <Swipper />
+
+      {/* <div className="galery" >
         <img src="public/bg1.jpeg" alt="" />
       </div>
       <div className="galery" >
@@ -273,7 +277,7 @@ function Invitation() {
       </div>
       <div className="galery" >
         <img src="public/bg1.jpeg" alt="" />
-      </div>
+      </div> */}
        
         
       </section>   
@@ -282,12 +286,7 @@ function Invitation() {
 
 
 {/* HADIAH */}
-    <section className="resepsi_3" id="top3">
-      <div className="container_top3">
-        <h1>Amplop Digital</h1>
-      </div>       
-        
-    </section> 
+      <Reward/>
 
     
 {/* COMENTs */}
@@ -338,28 +337,27 @@ function Invitation() {
               Tampilan Pesan
             </h1>
             
-          <div className="root" id="root">
-
-          {
-            allComent.map((e, index)=>(
-              <div className="card" key={index}>
-              <div className="card-header">
-                  <h2>{e.nama}</h2>
+              <div className="root scrollbar">
+                {
+                  allComent.map((e, index)=>(
+                    <div className="card" key={index}>
+                      <div className="card-header">
+                          <h2>{e.nama}</h2>
+                      </div>
+                  
+                      <div className="card-body">
+                          <p className="message">{e.ucapan}</p>
+                          <p className="attendance">Kehadiran: {e.kehadiran}</p>
+                      </div>
+                  
+                      <div className="card-footer">
+                          <p className="timestamp" id="time">Dikirim pada: {e.time}</p>
+                      </div>
+                    </div>
+                  ))
+                }
               </div>
-            
-            <div className="card-body">
-                <p className="message">{e.ucapan}</p>
-                <p className="attendance">Kehadiran: {e.kehadiran}</p>
-            </div>
-            
-            <div className="card-footer">
-                <p className="timestamp" id="time">Dikirim pada: {e.time}</p>
-            </div>
-          </div>
-            ))
-          }
-        </div>
-      </div>  
+        </div>  
     </main>
       
 

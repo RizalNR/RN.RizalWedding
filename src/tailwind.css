@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        @apply w-2 h-2 hidden
+    }
+
+    /* .scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full bg-red-200
+    } */
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-[#DCC9A8] rounded-md
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply bg-[#dab679]
+    }
+
+    .slide {
+        @apply rounded-md
+    }
+}
