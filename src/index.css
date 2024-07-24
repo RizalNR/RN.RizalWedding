@@ -347,6 +347,7 @@ h4 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .detail_name1 {
@@ -419,10 +420,9 @@ h4 {
   }
 
   .detail_dan h1 {
-    font-weight: 100;
     font-size: 1.8rem;
     color: #3F6582;
-    font-family: 'Trebuchet MS' Arial, sans-serif;
+    font-family: "Dancing Script", cursive;
     
   }
   
@@ -851,8 +851,8 @@ h4 {
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc; /* Optional: Border for clarity */
+    padding: px;
+    border: 10px solid rgba(204, 204, 204, 0);
     box-shadow: 0 1px 8px rgb(185, 143, 5); /* Optional: Shadow for style */
     margin-top: 20px;
     border-radius: 20px;
