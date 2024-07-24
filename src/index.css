@@ -239,10 +239,11 @@ h4 {
     
   }
 
-  /* ubah backgroun card */
+  /* ubah background card */
 .bg-img {
-  background-image: url('public/images (3).jpeg') ;
+  background-image: url('public/images3.jpeg') ;
   background-size: cover;
+  position: relative;
 }
 
   .container_top {
