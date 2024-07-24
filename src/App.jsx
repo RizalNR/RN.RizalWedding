@@ -5,6 +5,7 @@ import Invitation from "./pages/Invitation";
 
 const App = () => {
   return (
+  
 
 
 
@@ -14,7 +15,7 @@ const App = () => {
       </Routes>
 
       
-  
+
   );
 };
 
