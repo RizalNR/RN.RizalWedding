@@ -74,7 +74,7 @@ const Reward = () => {
         </h1>
           <h2 className='text-[15px]'>Nama Penerima : Ayudyah Ainun Nabillah </h2>
           <h2 className='text-[15px]'>No.HP : 0895340145387 </h2>
-          <h2 className='text-[15px]'>Alamat : Jl. Kendeng No.36 RT 08/RW 14, Sidanegara, Cilacap, Jawa Tengah</h2>
+          <h2 className='text-[13px]'>Alamat : Jl. Kendeng No.36 RT 08/RW 14, Sidanegara, Cilacap, Jawa Tengah</h2>
         </div>
       </div>
     </div>
