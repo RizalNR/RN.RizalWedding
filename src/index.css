@@ -241,7 +241,7 @@ h4 {
 
   /* ubah background card */
 .bg-img {
-  background-image: url('public/images3.jpeg') ;
+  background-image: url('/images3.jpeg') ;
   background-size: cover;
   position: relative;
 }

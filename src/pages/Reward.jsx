@@ -52,7 +52,7 @@ const Reward = () => {
       
       <div className='w-[296px] bg-img h-[154px] bg-slate-200 rounded-md relative'>
         {/* Content card Kedua */}
-        <img src="public/BCA_logo_Bank_Central_Asia-1.png" alt="BCA" className='w-15 h-5 absolute right-3 top-3 ' />
+        <img src="/Logo_BCA.png" alt="BCA" className='w-15 h-5 absolute right-3 top-3 ' />
         <div className='mt-8 ml-2'>
           <img src="public/chip-atm-1.png" alt="chip2" className='w-8 h-8 absolute left-5 mt-5' />
           <p id='noRek' className='text-[12px] py-0 px-2 absolute bottom-10'>
