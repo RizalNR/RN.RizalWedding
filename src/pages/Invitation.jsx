@@ -156,8 +156,8 @@ function Invitation() {
       </div>  
       
       <img
-        src="/billa.jpg"
-        alt=""
+        src="/billa.jpg" 
+        alt="fotobilla"
         className="main_image"
       />
 
@@ -176,7 +176,7 @@ function Invitation() {
 
       <img
         src="/rama.jpg"
-        alt=""
+        alt="fotorama"
         className="main_image"
       />
 
