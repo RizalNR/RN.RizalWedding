@@ -7,7 +7,7 @@ function Swipper() {
   return (
 
 
-    <div className='p-[20px]'>
+    <div className='py-[30px] px-[50px]'>
       <Carousel
       autoPlay 
       infiniteLoop
