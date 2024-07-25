@@ -29,7 +29,7 @@ const Reward = () => {
       Anda, Anda dapat memberi kado secara cashless.
     </p>
 
-    <button className='mt-10 py-1 px-5 text-white rounded-full bg-blue-500 mb-10' onClick={handleBtn} >Kirim Hadiah</button>
+    <button className='mt-10 py-1 px-5 text-white rounded-full bg-custom-orange mb-10' onClick={handleBtn} >Kirim Hadiah</button>
 
     <div className={`font-bold mb-10 mt-5 grid gap-8 'costum-image ${btn ? "hidden opacity-0 transform -translate-y-10" : "block opacity-100 transform translate-y-0"} transition-all duration-1000 ease-in-out` }>
       {/* ATM 1 */}
@@ -54,7 +54,7 @@ const Reward = () => {
         {/* Content card Kedua */}
         <img src="/Logo_BCA.png" alt="BCA" className='w-15 h-5 absolute right-3 top-3 ' />
         <div className='mt-8 ml-2'>
-          <img src="public/chip-atm-1.png" alt="chip2" className='w-8 h-8 absolute left-5 mt-5' />
+          <img src="/chip-atm-1.png" alt="chip2" className='w-8 h-8 absolute left-5 mt-5' />
           <p id='noRek' className='text-[12px] py-0 px-2 absolute bottom-10'>
           6975444752
         </p>
