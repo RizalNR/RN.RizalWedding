@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDHnCG5m2OTezqMNcPd9sMTAQaEYk7LsrE",
-  authDomain: "rn-wedding-3e2e5.firebaseapp.com",
-  projectId: "rn-wedding-3e2e5",
-  storageBucket: "rn-wedding-3e2e5.appspot.com",
-  messagingSenderId: "50458303871",
-  appId: "1:50458303871:web:3160732de61c595f59ce4a"
+  apiKey: "AIzaSyA2Bjfv_DawjSjv4mlE1uvIrSO1_rhWIMw",
+  authDomain: "rn-rizalwedding.firebaseapp.com",
+  projectId: "rn-rizalwedding",
+  storageBucket: "rn-rizalwedding.appspot.com",
+  messagingSenderId: "325215941394",
+  appId: "1:325215941394:web:71c2b1d34520a5667339cb"
 };
 
 // Initialize Firebase

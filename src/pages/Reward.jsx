@@ -20,7 +20,7 @@ const Reward = () => {
     }
   return (
     <div className='w-screen flex flex-col items-center resepsi_3'>
-    <div class="container_top3"><h1>Amplop Digital</h1></div>
+    <div className="container_top3"><h1>Amplop Digital</h1></div>
     <p className='text-center mt-10'>
       Doa Restu Anda merupakan <br />
       karunia yang sangat berarti bagi kami. <br />
@@ -56,10 +56,10 @@ const Reward = () => {
         <div className='mt-8 ml-2'>
           <img src="/chip-atm-1.png" alt="chip1" className='w-8 h-8 absolute left-5 mt-5' />
           <h1 id='noRek' className='text-[12px] text-black py-0 px-2 absolute bottom-10'>
-          6975444752
+          6975444787
           </h1>
         <h1 className='py-0 px-2 font-light text-black absolute bottom-5 font-dancing'>
-        Ayudyah Ainun Nabillah
+        Rizal Nur Ramadhan
         </h1>
         </div>
         <button onClick={copyNoRek} className={`py-1 px-5 text-white rounded-full bg-blue-400 absolute bottom-5 right-3 font-crimson`}>Copy</button>
@@ -70,12 +70,12 @@ const Reward = () => {
         {/* Content card ketiga */}
         <div className='mt-2'>
         <h1 className='text-[22px] '>🎁🎁🎁</h1>
-        <h1 className='text-[15px] mt-2 mb-2 font-crimson'>
+        <h1 className='text-[15px] mt-2 mb-4 font-crimson'>
           KIRIM HADIAH
         </h1>
-          <h2 className='text-[13px] font-crimson'>Nama Penerima : Ayudyah Ainun Nabillah </h2>
-          <h2 className='text-[13px] font-crimson'>No.HP : 0895340145387 </h2>
-          <h2 className='text-[13px] font-crimson'>Alamat : Jl. Kendeng No.36 RT 08/RW 14, Sidanegara, Cilacap, Jawa Tengah</h2>
+          <h2 className='text-[13px] font-crimson'>Nama Penerima : Rizal Nur Ramadhan </h2>
+          <h2 className='text-[13px] font-crimson'>No.HP : 081230211096 </h2>
+          <h2 className='text-[13px] font-crimson'>Perum Jalagriya Blok H VI/1 RT 028/RW 008, Sugihwaras, Candi, Sidoarjo, Jawa Timur</h2>
         </div>
       </div>
     </div>

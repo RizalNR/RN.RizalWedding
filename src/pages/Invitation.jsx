@@ -53,8 +53,6 @@ function Invitation() {
       ucapan,
       kehadiran,
       time
-
-      // eslint-disable-next-line no-unused-vars
     }).then((res) =>{
       console.info("data berhasil di masukan");
       event.target.reset()
@@ -68,7 +66,7 @@ function Invitation() {
   // Mendeklarasikan fungsi asinkron bernama storeBiodata yang menerima parameter data
   async function storeInvitation(data) {
     // Membuat referensi ke dokumen di dalam koleksi "biodata" dengan ID berdasarkan email dari data
-    const docRef = doc(db, "/coment/" + data.nama);
+    const docRef = doc(db, "/coment/" + data.time);
 
     // Menyimpan data ke dokumen yang direferensikan, menunggu operasi ini selesai sebelum melanjutkan
     const store = await setDoc(docRef, data);
@@ -116,9 +114,6 @@ function Invitation() {
     })
   }, [])
   
-  useEffect(()=>{
-    console.log(allComent)
-  }, [allComent])
   
   //GALERY
   
@@ -130,7 +125,7 @@ function Invitation() {
      <section className="resepsi_top" id="top">
       <div className="container_top">
       <h3 className="title">THE WEDDING OF</h3>
-      <h1 className="title_2">Billah & Rizal</h1>
+      <h1 className="title_2">Rizal & Billah</h1>
       <h3 className="title_3">Sabtu, 14 September 2024</h3>
       </div>
       <img className="img_top" src="/wayang.png" alt="" />
@@ -155,17 +150,17 @@ function Invitation() {
         </p>
       </div>  
       
+      
       <img
-        src="/billa.jpg" 
-        alt="fotobilla"
+        src="/rama.jpg" 
+        alt="fotorama"
         className="main_image"
       />
 
       <div className="detail_name">
-      <h1>Ayudyah Ainun Nabillah, S.H</h1>
+      <h1>Rizal Nur Ramadhan, S.Kom</h1>
         <p>
-          Putri Kedua Dari: <br /> Pelda (Purn) Slamet Riyanto & Ibu Arni Maya Nur
-          Priyatin
+        Putra Pertama Dari: <br /> Mayor Laut (E) Nurjaya & (Almh) Ibu Lilik Rustiana
         </p>
         
       </div>
@@ -175,15 +170,16 @@ function Invitation() {
       </div>
 
       <img
-        src="/rama.jpg"
-        alt="fotorama"
+        src="/billa.jpg"
+        alt="fotobilla"
         className="main_image"
       />
 
       <div className="detail_name">
-      <h1>Rizal Nur Ramadhan, S.Kom</h1>
+      <h1>Ayudyah Ainun Nabillah, S.H</h1>
         <p>
-          Putra Pertama Dari: <br /> Mayor Laut (E) Nurjaya & (Almh) Ibu Lilik Rustiana
+        Putri Kedua Dari: <br /> Pelda (Purn) Slamet Riyanto & Ibu Arni Maya Nur
+        Priyatin
         </p>
       </div>
     </div>
@@ -192,11 +188,9 @@ function Invitation() {
     {/* Section 3 AKAD NIKAH */}
    <section className="resepsi_3" id="top3">
       <div className="container_top3">
-        <h1>Akad Nikah</h1>
-        <h1>&</h1>
         <h1>Resepsi</h1>
         <p>Sabtu,</p>
-        <h2>14</h2>
+        <h2>21</h2>
         <p>September 2024 <br/> 09:00 WIB - Selesai</p>
       
       <div className="maps_icons">
@@ -204,15 +198,14 @@ function Invitation() {
       </div>
 
         <address>
-          Kediaman Mempelai Wanita <br/>
-          Jl. Kendeng No.36 RT 08/RW 14, Sidanegara, Cilacap, Jawa
-          Tengah 
+          Kediaman Mempelai Pria <br/>
+          Perum Jalagriya Blok H VI/1 <br/> RT 028/RW 008, Sugihwaras, Candi, Sidoarjo, Jawa Timur
         </address>
 
         <details>
           <summary className="summary_3">Lihat Lokasi / Maps</summary>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3953.788528570198!2d109.02019100000001!3d-7.705827999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDInMjEuMCJTIDEwOcKwMDEnMTIuNyJF!5e0!3m2!1sen!2sid!4v1721301180866!5m2!1sen!2sid" 
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3955.834698291524!2d112.69957!3d-7.483498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjknMDAuNiJTIDExMsKwNDEnNTguNSJF!5e0!3m2!1sen!2sid!4v1721301597991!5m2!1sen!2sid"
             width="100%"
             height="300"
             style={{ border: 0 }}
