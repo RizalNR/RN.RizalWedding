@@ -76,7 +76,7 @@ function Invitation() {
   }
 
   //pengaturan Waktu & Tanggal
-  const targetDate = new Date('2024-09-14T09:00:00');
+  const targetDate = new Date('2024-09-21T09:00:00');
 
 
 
@@ -126,7 +126,7 @@ function Invitation() {
       <div className="container_top">
       <h3 className="title">THE WEDDING OF</h3>
       <h1 className="title_2">Rizal & Billah</h1>
-      <h3 className="title_3">Sabtu, 14 September 2024</h3>
+      <h3 className="title_3">Sabtu, 21 September 2024</h3>
       </div>
       <img className="img_top" src="/wayang.png" alt="" />
       <CountdownTimer targetDate={targetDate}/> 
@@ -356,7 +356,7 @@ function Invitation() {
 
       <div id="audio_container" className="audio-box">
         <audio ref={audioRef} id="song" hidden controls loop autoPlay>
-          <source src="https://res.cloudinary.com/rizalnr/video/upload/v1647408382/musik/Akad_eahoms.mp3" />
+          <source src="https://res.cloudinary.com/rizalnr/video/upload/v1722063135/YOU_RE_STILL_THE_ONE-Boost_bpqs5r.mp3" />
         </audio>
       </div>
       <button className="btn_play_pause" onClick={togglePlayPause}>{isPlaying ?  <FaCirclePause /> : <FaPlayCircle /> }</button>
