@@ -316,12 +316,12 @@ function Invitation() {
           </div>
 
           <select id="kehadiran" className="confirm" name="kehadiran">
-            <option value="konfirmasi kehadiran">
+            <option className="font-crimson" value="konfirmasi kehadiran">
               Konfirmasi Kehadiran
             </option>
-            <option value="Hadir">Hadir</option>
-            <option value="Akan Hadir">Akan Hadir</option>
-            <option value="Tidak Hadir">Tidak Hadir</option>
+            <option className="font-crimson" value="Hadir">Hadir</option>
+            <option className="font-crimson" value="Akan Hadir">Akan Hadir</option>
+            <option className="font-crimson" value="Tidak Hadir">Tidak Hadir</option>
           </select>
 
           <div className="btn_group">
