@@ -13,7 +13,7 @@ const Home = () => {
         className="main_home_image"
       />
       <h1 className="home_title_2">
-      Billah & Rizal 
+      Rizal & Billah
       </h1>
 
       <h3 className="home_title_3">Sabtu, 21 September 2024</h3>
