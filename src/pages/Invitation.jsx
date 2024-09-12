@@ -76,7 +76,7 @@ function Invitation() {
   }
 
   //pengaturan Waktu & Tanggal
-  const targetDate = new Date('2024-09-21T09:00:00');
+  const targetDate = new Date('2024-09-21T10:00:00');
 
 
 
