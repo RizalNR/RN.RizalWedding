@@ -191,7 +191,7 @@ function Invitation() {
         <h1>Resepsi</h1>
         <p>Sabtu,</p>
         <h2>21</h2>
-        <p>September 2024 <br/> 09:00 WIB - Selesai</p>
+        <p>September 2024 <br/> 10:00 WIB - Selesai</p>
       
       <div className="maps_icons">
         <GrMapLocation/>
