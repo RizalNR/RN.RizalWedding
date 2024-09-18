@@ -45,7 +45,7 @@ const Reward = () => {
         Ayudyah Ainun Nabillah
         </h1>
         </div>
-        <button onClick={copyNoRek} className={`py-1 px-5 text-white rounded-full bg-blue-400 absolute bottom-5 right-3 font-crimson`}>Copy</button>
+        <button onClick={copyNoReg} className={`py-1 px-5 text-white rounded-full bg-blue-400 absolute bottom-5 right-3 font-crimson`}>Copy</button>
       </div>
 
       {/* ATM 2 */}
