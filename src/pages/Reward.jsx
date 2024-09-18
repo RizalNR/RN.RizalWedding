@@ -20,7 +20,7 @@ const Reward = () => {
     function copyNoRek2 (e){
       const copy = document.getElementById('noRek').innerText;
       navigator.clipboard.writeText(copy).then(()=> {
-        alert('No Rekening Berhasil di Copy')
+        alert('No Rekening Berhasil di Copy coy')
       }, (err)=> {
         console.log(err)
       })
