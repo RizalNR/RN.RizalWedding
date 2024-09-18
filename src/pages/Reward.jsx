@@ -16,14 +16,6 @@ const Reward = () => {
       }, (err)=> {
         console.log(err)
       })
-
-    function copyNoRek2 (e){
-      const copy = document.getElementById('noRek').innerText;
-      navigator.clipboard.writeText(copy).then(()=> {
-        alert('No Rekening Berhasil di Copy coy')
-      }, (err)=> {
-        console.log(err)
-      })
   
     }
   return (
@@ -53,7 +45,6 @@ const Reward = () => {
         Ayudyah Ainun Nabillah
         </h1>
         </div>
-        <button onClick={copyNoRek} className={`py-1 px-5 text-white rounded-full bg-blue-400 absolute bottom-5 right-3 font-crimson`}>Copy</button>
       </div>
 
       {/* ATM 2 */}
