@@ -63,7 +63,7 @@ const Reward = () => {
         </h1>
         </div>
         <button onClick={copyNoRek} className={`py-1 px-5 text-white rounded-full bg-blue-400 absolute bottom-5 right-3 font-crimson`}>Copy</button>
-      </div>
+      </div>        
       
 
       <div className='w-[296px] bg-img h-[200px] bg-slate-200 rounded-md text-center'>
